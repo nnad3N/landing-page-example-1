@@ -1,0 +1,44 @@
+---
+import backdrop from "../assets/profile-backdrop.svg";
+import profilePicture from "../assets/profilePicture.jpg";
+import { Image } from "@astrojs/image/components";
+import Card from "../Card.astro";
+
+const cards = [
+  {
+    name: "Lorem Ipsum",
+    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
+    img: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
+    img: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
+    img: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
+    img: "",
+  },
+];
+---
+
+<div class="flex flex-col justify-center items-center mt-12 mx-auto">
+  <div class="w-full max-w-md md:max-w-full">
+    <h2 class="uppercase text-accent font-display text-2xl">TERAPIA</h2>
+    <h3 class="text-4xl font-medium mt-3 mb-2 md:text-center md:mb-4">Lorem Ipsum</h3>
+    <p class="text-justify md:max-w-xl md:mx-auto">
+      Aenean egestas faucibus lectus, non convallis lorem imperdiet iaculis. Nullam cursus libero sed interdum luctus.
+      Nunc ante nulla, dictum in lacus non, finibus aliquam ante. Donec ac metus a tortor sodales tempus. Lorem ipsum
+      dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+  <div class="mt-10 grid gap-y-6 grid-cols-1 md:gap-x-16 lg:gap-x-32 md:grid-cols-2">
+    {cards.map((content) => <Card content={content} />)}
+  </div>
+</div>
