@@ -1,7 +1,4 @@
 ---
-import backdrop from "../assets/profile-backdrop.svg";
-import profilePicture from "../assets/profilePicture.jpg";
-import { Image } from "@astrojs/image/components";
 import Card from "../Card.astro";
 
 const cards = [
@@ -28,11 +25,11 @@ const cards = [
 ];
 ---
 
-<div class="flex flex-col justify-center items-center mt-12 mx-auto">
+<div id="therapy" class="flex flex-col justify-center items-center pt-6 mx-auto">
   <div class="w-full max-w-md md:max-w-full">
     <h2 class="uppercase text-accent font-display text-2xl">TERAPIA</h2>
     <h3 class="text-4xl font-medium mt-3 mb-2 md:text-center md:mb-4">Lorem Ipsum</h3>
-    <p class="text-justify md:max-w-xl md:mx-auto">
+    <p class="text-justify md:max-w-xl md:mx-auto leading-snug">
       Aenean egestas faucibus lectus, non convallis lorem imperdiet iaculis. Nullam cursus libero sed interdum luctus.
       Nunc ante nulla, dictum in lacus non, finibus aliquam ante. Donec ac metus a tortor sodales tempus. Lorem ipsum
       dolor sit amet, consectetur adipiscing elit.
