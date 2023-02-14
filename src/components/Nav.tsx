@@ -24,7 +24,7 @@ const links = [
 
 const Nav = () => {
   return (
-    <nav className="flex h-16 w-full items-center justify-between px-5 xl:px-40 2xl:px-72">
+    <header className="mx-auto flex h-16 w-full items-center justify-between px-5 lg:max-w-6xl">
       <Logo />
       <div className="hidden space-x-8 md:flex">
         {links.map(({ name, href }, index) => (
@@ -54,7 +54,7 @@ const Nav = () => {
           ))}
         </Menu.Items>
       </Menu>
-    </nav>
+    </header>
   );
 };
 

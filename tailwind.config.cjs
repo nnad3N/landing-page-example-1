@@ -8,6 +8,9 @@ module.exports = {
       display: ["Titan One"],
     },
     extend: {
+      screens: {
+        "3xl": "1876px",
+      },
       colors: {
         accent: "#F49729",
         primary: "#3C302E",

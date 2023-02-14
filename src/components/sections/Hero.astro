@@ -1,9 +1,10 @@
 ---
 import { PhoneIcon } from "@heroicons/react/24/outline";
+import SectionLayout from "../../layouts/SectionLayout.astro";
 ---
 
-<section class="mx-auto mt-6 flex max-w-md flex-col lg:max-w-full lg:flex-row lg:items-center lg:justify-between">
-  <div class="flex flex-col text-center font-display text-5xl sm:text-left sm:text-6xl lg:text-7xl">
+<SectionLayout class="mx-auto mt-6 flex max-w-md flex-col lg:flex-row lg:items-center lg:justify-between">
+  <div class="flex flex-col font-display text-5xl md:text-6xl lg:text-7xl">
     <h1>PRZYJAZNY</h1>
     <h1 class="tracking-special text-accent">LOGOPEDA</h1>
   </div>
@@ -12,10 +13,10 @@ import { PhoneIcon } from "@heroicons/react/24/outline";
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia est ornare aliquam bibendum. Donec cursus
       dapibus nisi quis laoreet.
     </p>
-    <h2 class="mt-2 text-center font-medium sm:text-left">Umów sie na wizytę</h2>
-    <div class="flex items-center justify-center font-medium sm:justify-start">
+    <h2 class="mt-2 font-medium">Umów sie na wizytę</h2>
+    <div class="flex items-center justify-start font-medium">
       <PhoneIcon className="h-5 w-5 mr-2 stroke-2" />
       <span data-encrypted={btoa("(+48) 111 111 111")}></span>
     </div>
   </div>
-</section>
+</SectionLayout>

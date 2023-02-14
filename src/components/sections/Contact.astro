@@ -2,9 +2,10 @@
 import Header from "../Header.astro";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import background from "../../assets/contact-background.svg";
+import SectionLayout from "../../layouts/SectionLayout.astro";
 ---
 
-<section id="contact" class="relative mx-auto max-w-md pt-2 sm:max-w-xl">
+<SectionLayout id="contact" class="relative pt-2">
   <div class="mx-auto flex aspect-[1/0.8] max-w-md flex-col items-center justify-center">
     <Header text="Umów Wizytę" />
     <p class="text-justify text-sm leading-snug md:text-base">
@@ -17,8 +18,8 @@ import background from "../../assets/contact-background.svg";
     </div>
   </div>
   <img
-    class="absolute top-1/2 left-1/2 -z-10 h-auto w-full -translate-y-1/2 -translate-x-1/2 scale-125 sm:scale-100"
+    class="absolute top-1/2 left-1/2 -z-10 h-auto w-full max-w-lg -translate-y-1/2 -translate-x-1/2 scale-110 sm:max-w-lg sm:scale-100 md:max-w-xl"
     src={background}
     alt="Tło do sekcji kontakt"
   />
-</section>
+</SectionLayout>

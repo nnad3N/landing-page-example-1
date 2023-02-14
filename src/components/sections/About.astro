@@ -4,11 +4,12 @@ import profilePicture from "../../assets/profile-picture.jpg";
 import { Image } from "@astrojs/image/components";
 import SectionHeader from "../SectionHeader.astro";
 import Header from "../Header.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
 ---
 
-<section
+<SectionLayout
   id="about"
-  class="mx-auto flex max-w-md flex-col items-center justify-center pt-3 lg:max-w-full lg:flex-row lg:justify-between lg:space-x-16 2xl:flex-row"
+  class="flex max-w-md flex-col items-center justify-center pt-3 lg:flex-row lg:justify-between lg:space-x-16 2xl:flex-row"
 >
   <div class="md:max-w-md">
     <SectionHeader text="O mnie" />
@@ -20,9 +21,9 @@ import Header from "../Header.astro";
     </p>
   </div>
   <div class="relative mt-8 flex aspect-[1/0.8] w-full items-center justify-center md:max-w-lg 2xl:max-w-xl">
-    <img class="absolute inset-0 -z-10 h-auto w-full lg:-left-5" src={background} alt="Tło do zdjęcia" />
+    <img class="absolute inset-0 -z-10 h-auto w-full" src={background} alt="Tło do zdjęcia" />
     <Image
-      class="rounded-full w-7/12"
+      class="rounded-full w-7/12 lg:translate-x-5"
       src={profilePicture}
       width={350}
       height={350}
@@ -30,4 +31,4 @@ import Header from "../Header.astro";
       format="webp"
     />
   </div>
-</section>
+</SectionLayout>

@@ -1,4 +1,5 @@
 ---
+import SectionLayout from "../../layouts/SectionLayout.astro";
 import Card from "../Card.astro";
 import Header from "../Header.astro";
 import SectionHeader from "../SectionHeader.astro";
@@ -27,7 +28,7 @@ const cards = [
 ];
 ---
 
-<section id="therapy" class="mx-auto flex flex-col items-center justify-center pt-3">
+<SectionLayout id="therapy" class="flex flex-col items-center justify-center pt-3">
   <div class="w-full max-w-md md:max-w-full">
     <SectionHeader text="Terapia" />
     <Header text="Lorem Ipsum" />
@@ -40,4 +41,4 @@ const cards = [
   <div class="mt-8 grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-16 lg:gap-x-56">
     {cards.map((content) => <Card content={content} />)}
   </div>
-</section>
+</SectionLayout>
