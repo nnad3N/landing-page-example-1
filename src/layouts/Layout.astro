@@ -20,7 +20,7 @@ import Navigation from "../components/Navigation";
   <body>
     <header class="mx-auto flex w-full items-center justify-between py-4 px-5 lg:max-w-6xl">
       <Logo />
-      <Navigation client:media="(max-width: 768px)" />
+      <Navigation client:visible />
     </header>
     <slot />
     <footer
