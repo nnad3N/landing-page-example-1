@@ -1,5 +1,7 @@
 ---
 import Card from "../Card.astro";
+import Header from "../Header.astro";
+import SectionHeader from "../SectionHeader.astro";
 
 const cards = [
   {
@@ -25,17 +27,17 @@ const cards = [
 ];
 ---
 
-<div id="therapy" class="flex flex-col justify-center items-center pt-6 mx-auto">
+<section id="therapy" class="mx-auto flex flex-col items-center justify-center pt-3">
   <div class="w-full max-w-md md:max-w-full">
-    <h2 class="uppercase text-accent font-display text-2xl">TERAPIA</h2>
-    <h3 class="text-4xl font-medium mt-3 mb-2 md:text-center md:mb-4">Lorem Ipsum</h3>
-    <p class="text-justify md:max-w-xl md:mx-auto leading-snug">
+    <SectionHeader text="Terapia" />
+    <Header text="Lorem Ipsum" />
+    <p class="text-justify text-sm leading-snug md:mx-auto md:max-w-2xl md:text-base">
       Aenean egestas faucibus lectus, non convallis lorem imperdiet iaculis. Nullam cursus libero sed interdum luctus.
       Nunc ante nulla, dictum in lacus non, finibus aliquam ante. Donec ac metus a tortor sodales tempus. Lorem ipsum
       dolor sit amet, consectetur adipiscing elit.
     </p>
   </div>
-  <div class="mt-10 grid gap-y-6 grid-cols-1 md:gap-x-16 lg:gap-x-32 md:grid-cols-2">
+  <div class="mt-8 grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-16 lg:gap-x-56">
     {cards.map((content) => <Card content={content} />)}
   </div>
-</div>
+</section>

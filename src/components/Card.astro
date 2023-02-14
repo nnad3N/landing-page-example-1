@@ -12,11 +12,11 @@ const {
 } = Astro.props;
 ---
 
-<div class="max-w-xs md:max-w-sm flex flex-col items-center justify-center md:flex-row">
-  <div class="w-16 h-16 aspect-square rounded-full mb-2 md:mb-0 md:mr-8 bg-gray-300"></div>
+<div class="flex max-w-sm flex-col items-center justify-center md:flex-row">
+  <div class="mb-2 aspect-square h-16 w-16 rounded-full bg-gray-300 md:mb-0 md:mr-8"></div>
   <div>
-    <h3 class="text-lg font-medium text-center md:text-left">{name}</h3>
-    <p class="text-sm text-justify">
+    <h3 class="text-center text-lg font-medium md:text-left">{name}</h3>
+    <p class="text-justify text-sm">
       {description}
     </p>
   </div>

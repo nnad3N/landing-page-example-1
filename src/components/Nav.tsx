@@ -10,11 +10,11 @@ const links = [
   },
   {
     name: "terapia",
-    href: "#about",
+    href: "#therapy",
   },
   {
     name: "kontakt",
-    href: "#about",
+    href: "#contact",
   },
   {
     name: "fanpage",
@@ -24,7 +24,7 @@ const links = [
 
 const Nav = () => {
   return (
-    <nav className="flex h-16 w-full items-center justify-between px-3 md:px-5 xl:px-40 2xl:px-64">
+    <nav className="flex h-16 w-full items-center justify-between px-5 xl:px-40 2xl:px-72">
       <Logo />
       <div className="hidden space-x-8 md:flex">
         {links.map(({ name, href }, index) => (

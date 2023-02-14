@@ -1,0 +1,24 @@
+---
+import Header from "../Header.astro";
+import { PhoneIcon } from "@heroicons/react/24/outline";
+import background from "../../assets/contact-background.svg";
+---
+
+<section id="contact" class="relative mx-auto max-w-md pt-2 sm:max-w-xl">
+  <div class="mx-auto flex aspect-[1/0.8] max-w-md flex-col items-center justify-center">
+    <Header text="Umów Wizytę" />
+    <p class="text-justify text-sm leading-snug md:text-base">
+      Vestibulum finibus, odio ac varius ultrices, orci erat auctor lacus, eu feugiat arcu est nec libero. Vivamus sed
+      massa vitae arcu sagittis sagittis. Nam varius quis lorem ac eleifend.
+    </p>
+    <div class="mt-2 flex items-center text-base font-medium md:mt-4 md:text-lg">
+      <PhoneIcon className="h-5 w-5 mr-2 stroke-2" />
+      <span data-encrypted={btoa("(+48) 111 111 111")}></span>
+    </div>
+  </div>
+  <img
+    class="absolute top-1/2 left-1/2 -z-10 h-auto w-full -translate-y-1/2 -translate-x-1/2 scale-125 sm:scale-100"
+    src={background}
+    alt="Tło do sekcji kontakt"
+  />
+</section>

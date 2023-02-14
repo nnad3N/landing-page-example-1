@@ -20,9 +20,9 @@ import Nav from "../components/Nav";
   <body>
     <Nav client:media="(max-width: 1024px)" />
     <slot />
-    <footer class="px-3 h-16 flex items-center justify-center">
+    <footer class="mt-12 flex h-16 items-center justify-between px-5 sm:justify-center">
       <Logo isAccented={true} />
-      <p class="font-light leading-tight ml-6 text-sm">
+      <p class="ml-6 text-sm font-light leading-tight">
         oligofrenopedagog
         <br />
         mgr Grażyna Wójcik
@@ -30,3 +30,12 @@ import Nav from "../components/Nav";
     </footer>
   </body>
 </html>
+
+<script>
+  const elements = document.querySelectorAll("span[data-encrypted]");
+
+  elements.forEach((element) => {
+    element.textContent = atob(element.getAttribute("data-encrypted") ?? "");
+    element.removeAttribute("data-encrypted");
+  });
+</script>

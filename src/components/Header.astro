@@ -1,0 +1,16 @@
+---
+export interface Props {
+  text: string;
+  alignLeft?: boolean;
+}
+
+const { text, alignLeft } = Astro.props;
+---
+
+<h3
+  class:list={`mb-2 text-center text-3xl md:text-4xl font-medium sm:text-left ${
+    alignLeft ? "md:text-left" : "md:text-center"
+  }`}
+>
+  {text}
+</h3>
