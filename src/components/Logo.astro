@@ -1,0 +1,17 @@
+---
+import logoIcon from "../assets/logo-icon.svg";
+
+interface Props {
+  accented?: boolean;
+}
+
+const { accented } = Astro.props;
+---
+
+<div class="flex items-center">
+  <img class="h-8 w-auto" src={logoIcon} alt="Głowa mówiącego dziecka" />
+  <div class="ml-2 flex flex-col font-display leading-4">
+    <span class={`${accented ? "text-accent" : ""}`}>PRZYJAZNY</span>
+    <span class="tracking-special">LOGOPEDA</span>
+  </div>
+</div>

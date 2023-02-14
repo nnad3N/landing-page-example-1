@@ -7,6 +7,8 @@ interface Props {
 const { text, alignLeft } = Astro.props;
 ---
 
-<h3 class:list={`mb-2 text-3xl md:text-4xl font-medium  ${alignLeft ? "text-left sm:text-left" : "text-center"}`}>
+<h3
+  class:list={`mb-2 md:mb-3 text-3xl md:text-4xl font-medium  ${alignLeft ? "text-left sm:text-left" : "text-center"}`}
+>
   {text}
 </h3>

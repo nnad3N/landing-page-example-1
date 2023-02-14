@@ -1,0 +1,27 @@
+---
+import { Picture } from "@astrojs/image/components";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+  src: string;
+}
+
+const { src, class: className, ...rest } = Astro.props;
+---
+
+<div
+  {...rest}
+  class:list={["aspect-[9/13] w-44 flex-none overflow-clip rounded-xl bg-gray-200 md:w-60 lg:w-72", className]}
+>
+  <Picture
+    src={src}
+    alt="test"
+    widths={[180, 240, 290]}
+    sizes="(max-width: 768px) 180px, (max-width: 1024px) 240px, 290px"
+    aspectRatio="9:13"
+    fit="cover"
+    position="center"
+    loading="eager"
+    format="webp"
+  />
+</div>

@@ -4,8 +4,8 @@ import "@fontsource/poppins";
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/500.css";
 import "../styles/base.css";
-import Logo from "../components/Logo";
-import Nav from "../components/Nav";
+import Logo from "../components/Logo.astro";
+import Navigation from "../components/Navigation";
 ---
 
 <!DOCTYPE html>
@@ -18,9 +18,14 @@ import Nav from "../components/Nav";
     <title>Przyjazny Logopeda</title>
   </head>
   <body>
-    <Nav client:media="(max-width: 1024px)" />
+    <header class="mx-auto flex w-full items-center justify-between py-4 px-5 lg:max-w-6xl">
+      <Logo />
+      <Navigation client:media="(max-width: 768px)" />
+    </header>
     <slot />
-    <footer class="mt-12 flex h-16 items-center justify-between px-5 sm:justify-center">
+    <footer
+      class="mt-6 flex items-center justify-between gap-y-3 px-5 py-4 max-[390px]:flex-col-reverse sm:justify-center lg:mt-12"
+    >
       <Logo accented={true} />
       <p class="ml-6 text-sm font-light leading-tight">
         oligofrenopedagog
