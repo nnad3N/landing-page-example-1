@@ -1,7 +1,7 @@
 ---
 import background from "../../assets/profile-background.svg";
 import profilePicture from "../../assets/profile-picture.jpg";
-import { Image, Picture } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import SectionHeader from "../SectionHeader.astro";
 import Header from "../Header.astro";
 import SectionLayout from "../../layouts/SectionLayout.astro";
@@ -27,11 +27,10 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
         class="rounded-full w-full h-full"
         src={profilePicture}
         widths={[240, 350]}
-        sizes="(max-width: 450px) 12rem, (min-width: 450px) 22rem"
+        sizes="(max-width: 1024px) 15rem, (min-width: 450px) 22rem"
         aspectRatio="1:1"
-        formats={["webp"]}
+        formats={["webp", "avif"]}
         alt="Zdjęcie twarzy Grażyny Wójcik"
-        format="webp"
       />
     </div>
   </div>
