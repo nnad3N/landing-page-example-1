@@ -5,6 +5,6 @@ type Props = HTMLAttributes<"a">;
 const { class: className, ...rest } = Astro.props;
 ---
 
-<section {...rest} class:list={["mx-auto px-5 w-full lg:px-0 lg:max-w-6xl", className]}>
+<section {...rest} class:list={["mx-auto px-5 w-full xl:px-0 lg:max-w-6xl", className]}>
   <slot />
 </section>
