@@ -1,7 +1,7 @@
 ---
 import background from "../../assets/profile-background.svg";
 import profilePicture from "../../assets/profile-picture.jpg";
-import { Image } from "@astrojs/image/components";
+import { Image, Picture } from "@astrojs/image/components";
 import SectionHeader from "../SectionHeader.astro";
 import Header from "../Header.astro";
 import SectionLayout from "../../layouts/SectionLayout.astro";
@@ -22,13 +22,17 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
   </div>
   <div class="relative mt-8 flex aspect-[1/0.8] w-full items-center justify-center md:max-w-lg 2xl:max-w-xl">
     <img class="absolute inset-0 -z-10 h-auto w-full" src={background} alt="Tło do zdjęcia" />
-    <Image
-      class="rounded-full w-7/12 lg:translate-x-5"
-      src={profilePicture}
-      width={350}
-      height={350}
-      alt="Zdjęcie twarzy Grażyny Wójcik"
-      format="webp"
-    />
+    <div class="w-7/12 lg:translate-x-5">
+      <Picture
+        class="rounded-full w-full h-full"
+        src={profilePicture}
+        widths={[240, 350]}
+        sizes="(max-width: 450px) 12rem, (min-width: 450px) 22rem"
+        aspectRatio="1:1"
+        formats={["webp"]}
+        alt="Zdjęcie twarzy Grażyny Wójcik"
+        format="webp"
+      />
+    </div>
   </div>
 </SectionLayout>

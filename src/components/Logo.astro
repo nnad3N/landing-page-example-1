@@ -1,15 +1,27 @@
 ---
-import logoIcon from "../assets/logo-icon.svg";
+import logo from "../assets/logo.svg";
+import { Image } from "@astrojs/image/components";
 
 interface Props {
   accented?: boolean;
+  loading?: "lazy" | "eager";
 }
 
-const { accented } = Astro.props;
+const { accented, loading } = Astro.props;
 ---
 
 <div class="flex items-center">
-  <img class="h-8 w-auto" src={logoIcon} alt="Grafika głowy mówiącego dziecka" />
+  <Image
+    class="h-8 w-auto"
+    width={104}
+    height={53}
+    format="webp"
+    fit="outside"
+    src={logo}
+    loading={loading}
+    quality={100}
+    alt="Grafika głowy mówiącego dziecka"
+  />
   <div class="ml-2 flex flex-col font-display leading-4">
     <span class={`${accented ? "text-accent" : ""}`}>PRZYJAZNY</span>
     <span class="tracking-special">LOGOPEDA</span>
