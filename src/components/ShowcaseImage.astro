@@ -1,12 +1,14 @@
 ---
 import { Picture } from "@astrojs/image/components";
+import type { CropPosition } from "@astrojs/image/dist/loaders";
 import type { HTMLAttributes } from "astro/types";
 
 interface Props extends HTMLAttributes<"div"> {
   src: string;
+  position?: CropPosition;
 }
 
-const { src, class: className, ...rest } = Astro.props;
+const { src, position = "attention", class: className, ...rest } = Astro.props;
 ---
 
 <div
@@ -20,8 +22,9 @@ const { src, class: className, ...rest } = Astro.props;
     sizes="(max-width: 768px) 11rem, (max-width: 1024px) 15rem, (min-width: 1024px) 18rem"
     aspectRatio="9:13"
     fit="cover"
-    position="center"
+    position={position}
     loading="eager"
     formats={["webp", "avif"]}
+    quality={100}
   />
 </div>

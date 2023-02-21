@@ -3,27 +3,27 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
 import Card from "../Card.astro";
 import Header from "../Header.astro";
 import SectionHeader from "../SectionHeader.astro";
+import icon1 from "../../assets/icon1.svg";
+import icon2 from "../../assets/icon2.svg";
+import icon3 from "../../assets/icon3.svg";
+import icon4 from "../../assets/icon4.svg";
 
 const cards = [
   {
-    name: "Lorem Ipsum",
-    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
-    img: "",
+    name: "Mowa",
+    img: icon1,
   },
   {
-    name: "Lorem Ipsum",
-    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
-    img: "",
+    name: "Autyzm",
+    img: icon2,
   },
   {
-    name: "Lorem Ipsum",
-    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
-    img: "",
+    name: "Afazja",
+    img: icon3,
   },
   {
-    name: "Lorem Ipsum",
-    description: "Vivamus tempor, enim a pretium gravida, quam urna ultrices nulla, ut vehicula nisi nulla et lectus.",
-    img: "",
+    name: "Wzrok",
+    img: icon4,
   },
 ];
 ---
@@ -31,14 +31,35 @@ const cards = [
 <SectionLayout id="therapy" class="flex flex-col items-center justify-center pt-3">
   <div class="w-full max-w-md md:max-w-full">
     <SectionHeader text="Terapia" />
-    <Header text="Lorem Ipsum" />
-    <p class="text-justify text-sm leading-snug md:mx-auto md:max-w-2xl md:text-base">
-      Aenean egestas faucibus lectus, non convallis lorem imperdiet iaculis. Nullam cursus libero sed interdum luctus.
-      Nunc ante nulla, dictum in lacus non, finibus aliquam ante. Donec ac metus a tortor sodales tempus. Lorem ipsum
-      dolor sit amet, consectetur adipiscing elit.
+    <Header text="Moje Metody" />
+    <p class="text-justify text-sm leading-snug md:mx-auto md:max-w-[50rem] md:text-base">
+      Stosuję nowatorskie metody, a pracując z dziećmi do każdego przypadku podchodzę indywidualnie, by niemożliwe stało
+      się realne. Potrafię, poprzez zabawę, zmotywować dziecko do kolejnych drobnych kroczków, aby było z siebie dumne i
+      nieodczuwając zmęczenia, sięgało po więcej.
     </p>
   </div>
-  <div class="mt-8 grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-16 lg:gap-x-56">
-    {cards.map((content) => <Card content={content} />)}
+  <div
+    class="mt-8 grid max-w-5xl grid-cols-1 gap-y-8 md:w-full md:grid-cols-[auto_auto] md:justify-around lg:mt-10 xl:justify-between"
+  >
+    <Card content={cards[0]}>
+      <p class="[text-align-last:justify]">Wprowadzam dzieci do "krainy" oddechów</p>
+      <p class="[text-align-last:justify]">i dźwięków, by uzyskać zamierzony cel &#8212;</p>
+      <p>korektę zaburzonej głoski.</p>
+    </Card>
+    <Card content={cards[1]}>
+      <p>Zabieram dzieci i młodzież w baśniową podróż z metodą krakowską, pokazując im nieznany dotąd świat.</p>
+    </Card>
+    <Card content={cards[2]}>
+      <p>
+        Po wnikliwej analizie wybieram odpowienie dla Ciebie metody werbalne &#8212; słowne, bądź niewerbalne &#8212;
+        ilustracje.
+      </p>
+    </Card>
+    <Card content={cards[3]}>
+      <p>
+        Rejs, podczas którego zgłębisz procesy poznawcze, psychiczne i sprawnościowe, aby efektywnie posługiwać się
+        wzrokiem.
+      </p>
+    </Card>
   </div>
 </SectionLayout>

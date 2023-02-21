@@ -1,15 +1,18 @@
 ---
-import placeholder from "../../assets/placeholder.jpg";
-import placeholder2 from "../../assets/placeholder2.jpg";
+import photo1 from "../../assets/photo1.jpg";
+import photo2 from "../../assets/photo2.jpg";
+import photo3 from "../../assets/photo3.jpg";
+import photo4 from "../../assets/photo4.jpg";
+import photo5 from "../../assets/photo5.jpg";
 import ShowcaseImage from "../ShowcaseImage.astro";
 ---
 
 <section
   class="mx-auto flex w-screen max-w-[2000px] justify-center gap-x-8 lg:gap-x-12 lg:pb-2 lg:pt-8 xl:gap-x-16 2xl:justify-evenly 2xl:gap-x-0"
 >
-  <ShowcaseImage class="rotate-2" src={placeholder} />
-  <ShowcaseImage class="-rotate-2" src={placeholder2} />
-  <ShowcaseImage class="rotate-2" src={placeholder} />
-  <ShowcaseImage class="rotate-2" src={placeholder2} />
-  <ShowcaseImage class="-rotate-2" src={placeholder} />
+  <ShowcaseImage class="rotate-2" src={photo1} />
+  <ShowcaseImage class="-rotate-1" src={photo2} position="left top" />
+  <ShowcaseImage class="rotate-2" src={photo3} />
+  <ShowcaseImage class="rotate-1" src={photo4} />
+  <ShowcaseImage class="-rotate-2" src={photo5} />
 </section>
