@@ -5,16 +5,22 @@ interface Props {
   content: {
     name: string;
     img: string;
+    alt: string;
   };
 }
 
 const {
-  content: { name, img },
+  content: { name, img, alt },
 } = Astro.props;
 ---
 
 <div class="flex w-max flex-col items-center justify-center lg:flex-row">
-  <img src={img} class="object-fit mb-2 w-12 md:self-start lg:mb-0 lg:mr-8 lg:w-16 lg:self-center" />
+  <img
+    class="object-fit mb-2 w-12 md:self-start lg:mb-0 lg:mr-8 lg:w-16 lg:self-center"
+    src={img}
+    alt={alt}
+    loading="lazy"
+  />
   <div class="w-[20rem] text-sm [&>p]:text-justify">
     <h3 class="mb-1 text-center text-lg font-medium md:mb-0 md:text-left">{name}</h3>
     <slot />
