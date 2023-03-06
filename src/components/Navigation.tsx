@@ -16,8 +16,8 @@ const links = [
     href: "#contact",
   },
   {
-    name: "fanpage",
-    href: "https://facebook.com",
+    name: "facebook",
+    href: "https://www.facebook.com/profile.php?id=100090957246118",
   },
 ];
 
