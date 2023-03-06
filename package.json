@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "publish": "pnpm run build env-cmd -f ./.env cross-env-shell CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish dist --project-name=przyjazny-logopeda"
   },
   "dependencies": {
     "@astrojs/image": "^0.14.1",
@@ -28,6 +29,8 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/parser": "^5.51.0",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.34.0",
     "eslint-plugin-astro": "^0.23.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
