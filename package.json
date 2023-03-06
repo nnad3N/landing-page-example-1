@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish": "pnpm run build env-cmd -f ./.env cross-env-shell CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish dist --project-name=przyjazny-logopeda"
+    "publish": "pnpm run build && env-cmd -f ./.env cross-env-shell CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish dist --project-name=$CLOUDFLARE_PROJECT_NAME"
   },
   "dependencies": {
     "@astrojs/image": "^0.14.1",
