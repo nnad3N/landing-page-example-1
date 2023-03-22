@@ -1,28 +1,27 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 interface Props {
   content: {
     name: string;
+    description: string;
     img: string;
     alt: string;
   };
 }
 
 const {
-  content: { name, img, alt },
+  content: { name, description, img, alt },
 } = Astro.props;
 ---
 
-<div class="flex w-max flex-col items-center justify-center lg:flex-row">
+<div class="flex w-full max-w-sm flex-col items-center justify-center lg:flex-row">
   <img
     class="object-fit mb-2 w-12 md:self-start lg:mb-0 lg:mr-8 lg:w-16 lg:self-center"
     src={img}
     alt={alt}
     loading="lazy"
   />
-  <div class="w-[19rem] text-sm [&>p]:text-justify">
+  <div class="text-sm">
     <h3 class="mb-1 text-center text-lg font-medium md:mb-0 md:text-left">{name}</h3>
-    <slot />
+    <p class="text-justify" set:html={description} />
   </div>
 </div>

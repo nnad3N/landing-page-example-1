@@ -1,0 +1,59 @@
+---
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import Card from "../Card.astro";
+import Header from "../Header.astro";
+import SectionHeader from "../SectionHeader.astro";
+import icon1 from "../../assets/icon1.svg";
+import icon2 from "../../assets/icon2.svg";
+import icon3 from "../../assets/icon3.svg";
+import icon4 from "../../assets/icon4.svg";
+
+const cards = [
+  {
+    name: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam voluptate pariatur ducimus temporibus inventore.",
+    img: icon1,
+    alt: "Ikona dymków ze znakami zapytania",
+  },
+  {
+    name: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam voluptate pariatur ducimus temporibus inventore.",
+    img: icon2,
+    alt: "Ikona żarówki z kawałkiem puzzla za nią",
+  },
+  {
+    name: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam voluptate pariatur ducimus temporibus inventore.",
+    img: icon3,
+    alt: "Ikona mózgu z małym serduszkiem przed nim",
+  },
+  {
+    name: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus veniam voluptate pariatur ducimus temporibus inventore.",
+    img: icon4,
+    alt: "Ikona oka",
+  },
+];
+---
+
+<SectionLayout id="lorem-id" class="flex flex-col items-center justify-center pt-3">
+  <div class="w-full max-w-md md:max-w-full">
+    <SectionHeader text="Test" />
+    <Header text="Lorem Ipsum" />
+    <p class="text-justify text-sm leading-snug md:mx-auto md:max-w-[50rem] md:text-base">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dignissimos qui enim minima rerum a, minus quod,
+      dolore vitae quibusdam blanditiis asperiores voluptas expedita alias eaque ea maxime. Ab maiores sapiente facere
+      libero eos qui commodi aliquid porro soluta? Commodi inventore sint laboriosam illum labore eligendi ea harum
+      dolorum ex!
+    </p>
+  </div>
+  <div
+    class="mt-8 grid max-w-5xl grid-cols-1 gap-x-16 gap-y-8 md:w-full md:grid-cols-[auto_auto] md:justify-around lg:mt-10 xl:justify-between"
+  >
+    {cards.map((content) => <Card content={content} />)}
+  </div>
+</SectionLayout>

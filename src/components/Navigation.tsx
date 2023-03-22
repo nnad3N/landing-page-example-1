@@ -8,8 +8,8 @@ const links = [
     href: "#about",
   },
   {
-    name: "terapia",
-    href: "#therapy",
+    name: "test",
+    href: "#lorem-id",
   },
   {
     name: "kontakt",
@@ -17,7 +17,7 @@ const links = [
   },
   {
     name: "facebook",
-    href: "https://www.facebook.com/profile.php?id=100090957246118",
+    href: "https://www.facebook.com",
   },
 ];
 
