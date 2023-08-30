@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "publish": "pnpm run build && env-cmd -f ./.env cross-env-shell CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish dist --project-name=$CLOUDFLARE_PROJECT_NAME"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^3.0.0",
