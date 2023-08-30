@@ -11,33 +11,30 @@
     "publish": "pnpm run build && env-cmd -f ./.env cross-env-shell CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish dist --project-name=$CLOUDFLARE_PROJECT_NAME"
   },
   "dependencies": {
-    "@astrojs/image": "^0.14.1",
-    "@astrojs/react": "^2.0.2",
-    "@astrojs/tailwind": "^3.0.1",
-    "@fontsource/poppins": "^4.5.10",
-    "@fontsource/titan-one": "^4.5.9",
-    "@headlessui/react": "^1.7.10",
-    "@heroicons/react": "^2.0.15",
-    "astro": "^2.0.10",
+    "@astrojs/react": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@fontsource/poppins": "^5.0.8",
+    "@fontsource/titan-one": "^5.0.11",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "astro": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.31.3",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@types/prettier": "^2.7.2",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/parser": "^5.51.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/parser": "^6.5.0",
     "cross-env": "^7.0.3",
     "env-cmd": "^10.1.0",
-    "eslint": "^8.34.0",
-    "eslint-plugin-astro": "^0.23.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-astro": "^0.29.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "prettier": "^2.8.4",
-    "prettier-plugin-astro": "^0.8.0",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "typescript": "^4.9.5",
-    "wrangler": "^2.12.0"
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.6.0"
   }
 }
