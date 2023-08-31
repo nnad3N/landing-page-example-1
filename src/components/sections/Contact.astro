@@ -1,7 +1,7 @@
 ---
 import Header from "../Header.astro";
 import { PhoneIcon } from "@heroicons/react/24/outline";
-import background from "../../assets/contact-background.svg";
+import backgroundImg from "../../assets/contact-background.svg";
 import SectionLayout from "../../layouts/SectionLayout.astro";
 ---
 
@@ -19,7 +19,7 @@ import SectionLayout from "../../layouts/SectionLayout.astro";
   </div>
   <img
     class="absolute top-1/2 left-1/2 -z-10 h-auto w-[125vw] max-w-lg -translate-y-1/2 -translate-x-1/2 sm:scale-100 md:max-w-xl"
-    src={background}
-    alt="Tło do sekcji kontakt"
+    src={backgroundImg.src}
+    alt="Alt"
   />
 </SectionLayout>

@@ -1,30 +1,25 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import type { CropPosition } from "@astrojs/image/dist/loaders";
+import { Image } from "astro:assets";
 import type { HTMLAttributes } from "astro/types";
+import type { ImageMetadata } from "astro";
 
 interface Props extends HTMLAttributes<"div"> {
-  src: string;
-  position?: CropPosition;
+  src: ImageMetadata;
 }
 
-const { src, position = "attention", class: className, ...rest } = Astro.props;
+const { src, class: className, ...rest } = Astro.props;
 ---
 
 <div
   {...rest}
   class:list={["aspect-[9/13] w-44 flex-none overflow-clip rounded-xl bg-gray-200 md:w-60 lg:w-72", className]}
 >
-  <Picture
+  <Image
     src={src}
-    alt="test"
-    widths={[190, 260, 310]}
-    sizes="(max-width: 768px) 11rem, (max-width: 1024px) 15rem, (min-width: 1024px) 18rem"
-    aspectRatio="9:13"
-    fit="cover"
-    position={position}
+    width={310}
+    height={215}
     loading="eager"
-    formats={["webp", "avif"]}
     quality={100}
+    alt="Alt"
   />
 </div>

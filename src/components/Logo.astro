@@ -1,6 +1,6 @@
 ---
-import logo from "../assets/logo.png";
-import { Image } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
+import logoImg from "../assets/logo.png";
 
 interface Props {
   accented?: boolean;
@@ -12,15 +12,11 @@ const { accented, loading } = Astro.props;
 
 <div class="flex items-center">
   <Image
-    class="h-8 w-auto"
-    width={122}
-    height={64}
-    format="webp"
-    fit="outside"
-    src={logo}
+    width={62}
+    height={32}
+    src={logoImg}
     loading={loading}
-    quality={100}
-    alt="Grafika głowy mówiącego dziecka"
+    alt="Logo"
   />
   <div class="ml-2 flex flex-col font-display leading-4">
     <span class={`${accented ? "text-accent" : ""}`}>LOREM</span>

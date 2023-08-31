@@ -1,9 +1,11 @@
 ---
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   content: {
     name: string;
     description: string;
-    img: string;
+    img: ImageMetadata;
     alt: string;
   };
 }
@@ -16,7 +18,7 @@ const {
 <div class="flex w-full max-w-sm flex-col items-center justify-center lg:flex-row">
   <img
     class="object-fit mb-2 w-12 md:self-start lg:mb-0 lg:mr-8 lg:w-16 lg:self-center"
-    src={img}
+    src={img.src}
     alt={alt}
     loading="lazy"
   />
